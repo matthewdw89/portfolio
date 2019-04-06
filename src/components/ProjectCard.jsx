@@ -7,9 +7,9 @@ const Wrapper = styled.a`
   width: 100%;
   ${tw`shadow-lg relative no-underline rounded-lg px-8 py-8 md:py-24 text-white`};
   background: ${props => props.bg};
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
   }
 `
 

@@ -42,7 +42,7 @@ const Hero = ({ children, offset }) => (
       <SVG icon="hexa" width={16} stroke={colors['grey-darker']} left="10%" top="50%" />
       <SVG icon="hexa" width={8} stroke={colors['grey-darker']} left="80%" top="70%" />
     </Divider>
-    <Content speed={0.4} offset={offset}>
+    <Content speed={0.5} offset={offset}>
       <Wrapper>{children}</Wrapper>
     </Content>
   </>
