@@ -16,22 +16,10 @@ import Hero from '../views/Hero'
 import Projects from '../views/Projects'
 import About from '../views/About'
 import Contact from '../views/Contact'
+import Skills from '../views/Skills'
 
 import avatar from '../images/avatar.jpeg'
 
-const ProjectsWrapper = styled.div`
-  ${tw`flex flex-wrap justify-between mt-8`};
-  display: grid;
-  grid-gap: 4rem;
-  grid-template-columns: repeat(2, 1fr);
-  @media (max-width: 1200px) {
-    grid-gap: 3rem;
-  }
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-  }
-`
 
 const AboutHero = styled.div`
   ${tw`flex flex-col lg:flex-row items-center mt-8`};
@@ -56,6 +44,25 @@ const ContactText = styled.p`
 const Footer = styled.footer`
   ${tw`text-center text-grey absolute pin-b p-6 font-sans text-md lg:text-lg`};
 `
+
+const ProjectsWrapper = styled.div`
+  ${tw`flex flex-wrap justify-between mt-8`};
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 1200px) {
+    grid-gap: 3rem;
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+`
+
+const SkillsWrapper = styled.div`
+  ${tw`flex flex-wrap justify-between mt-8`};
+`
+
 const SpanBlocked = styled.span`
   ${tw`display: block`};
 `
@@ -91,6 +98,12 @@ const Index = () => (
           </ProjectCard>
         </ProjectsWrapper>
       </Projects>
+      <Skills offset={2}>
+        <Title>Skills</Title>
+        <SkillsWrapper>
+          <
+        </SkillsWrapper>
+      </Skills>
       <About offset={3}>
         <Title>About</Title>
         <AboutHero>
