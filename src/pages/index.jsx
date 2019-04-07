@@ -61,6 +61,7 @@ const ProjectsWrapper = styled.div`
 
 const SkillsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8`};
+  display:flex;
 `
 
 const SpanBlocked = styled.span`
@@ -101,7 +102,7 @@ const Index = () => (
       <Skills offset={2}>
         <Title>Skills</Title>
         <SkillsWrapper>
-          <
+          
         </SkillsWrapper>
       </Skills>
       <About offset={3}>
