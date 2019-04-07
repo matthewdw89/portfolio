@@ -6,7 +6,7 @@ module.exports = {
   siteTitle: 'Matthew Waters, Full-Stack Developer', // Navigation and Site Title
   siteTitleAlt: 'Matthew Waters, Front-End Web Developer', // Alternative Site title for SEO
   siteTitleShort: 'Matthew Waters', // short_name for manifest
-  siteHeadline: 'Creating marvelous web & blazginly fast websites', // Headline for schema.org JSONLD
+  siteHeadline: 'I code beautifully simple things, and I love what I do', // Headline for schema.org JSONLD
   siteUrl: 'https://matthewh20.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logo.png', // Used for SEO and manifest

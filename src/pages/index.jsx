@@ -17,7 +17,7 @@ import Projects from '../views/Projects'
 import About from '../views/About'
 import Contact from '../views/Contact'
 
-import avatar from '../images/avatar.jpg'
+import avatar from '../images/avatar.jpeg'
 
 const ProjectsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8`};
@@ -68,7 +68,7 @@ const Index = () => (
         <BigTitle>
           <SpanBlocked>Hello,</SpanBlocked> I'm Matt Waters.
         </BigTitle>
-        <Subtitle>I am Full-Stack Web Developer</Subtitle>
+        <Subtitle>I am a Full-Stack Web Developer</Subtitle>
       </Hero>
       <Projects offset={1}>
         <Title>Projects</Title>
@@ -101,11 +101,12 @@ const Index = () => (
           </AboutSub>
         </AboutHero>
         <AboutDesc>
-          You know the way you feel when you see a picture of two otters holding hands? That's how you're gonna feel
-          every day. My mother cried the day I was born because she knew she’d never be prettier than me. You should
-          make me your campaign manager. I was born for politics. I have great hair and I love lying. Captain? The kids
-          want to know where Paulie the Pigeon is. I told them he got sucked up into an airplane engine, is that all
-          right?
+          I am passionate about building excellent software that improves the lives of those around me. 
+          I specialize in creating software for clients ranging from individuals and small-businesses all the way 
+          to large enterprise corporations
+          As a web developer, I enjoy using my obsessive attention to detail, my unequivocal love for making things, 
+          and my mission-driven work ethic to literally change the world. That's why I’m excited to make a big impact 
+          at a high growth company.
         </AboutDesc>
       </About>
       <Contact offset={4}>
@@ -118,7 +119,7 @@ const Index = () => (
           </ContactText>
         </Inner>
         <Footer>
-          <SpanBlocked><a href="https://github.com/matthewdw89">Github</a></SpanBlocked>
+          <SpanBlocked><a href="https://github.com/matthewdw89" target="_blank" rel="noopener noreferrer">Github</a></SpanBlocked>
           Made by Matthew Waters.
         </Footer>
       </Contact>
