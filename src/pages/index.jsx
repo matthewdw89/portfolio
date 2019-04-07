@@ -6,6 +6,7 @@ import { Parallax } from 'react-spring/renderprops-addons.cjs'
 // Components
 import Layout from '../components/Layout'
 import ProjectCard from '../components/ProjectCard'
+import SkillsCard from '../components/SkillsCard'
 
 // Elements
 import Inner from '../elements/Inner'
@@ -60,12 +61,21 @@ const ProjectsWrapper = styled.div`
 `
 
 const SkillsWrapper = styled.div`
-  ${tw`flex flex-wrap justify-between mt-8`};
-  display:flex;
+  ${tw`flex flex-wrap mt-8`};
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: repeat(2, 1fr)
+  @media (max-width: 1200px) {
+    grid-gap: 3rem;
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
 `
 
 const SpanBlocked = styled.span`
-  ${tw`display: block`};
+  display: block;
 `
 
 const Index = () => (
@@ -102,16 +112,20 @@ const Index = () => (
       <Skills offset={2}>
         <Title>Skills</Title>
         <SkillsWrapper>
-          
+          <SkillsCard title="HTML">
+          test
+          </SkillsCard>
+          <SkillsCard title="CSS">
+          test-2
+          </SkillsCard>
         </SkillsWrapper>
       </Skills>
       <About offset={3}>
         <Title>About</Title>
         <AboutHero>
-          <Avatar src={avatar} alt="John Doe" />
+          <Avatar src={avatar} alt="Matthew Waters picture" />
           <AboutSub>
-            The English language can not fully capture the depth and complexity of my thoughts. So I'm incorporating
-            Emoji into my speech to better express myself. 😉
+            Test
           </AboutSub>
         </AboutHero>
         <AboutDesc>

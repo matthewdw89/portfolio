@@ -15,7 +15,7 @@ const Projects = ({ children, offset }) => (
       offset={`${offset / 2}`}
       factor={2.5}
     />
-    <Content speed={0.2} offset={`${offset}`} factor={1.5}>
+    <Content speed={0.2} offset={`${offset}`} factor={1}>
       <Inner>{children}</Inner>
     </Content>
   </>
