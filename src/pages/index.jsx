@@ -2,11 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
 import { Parallax } from 'react-spring/renderprops-addons.cjs'
+import config from '../../config/website'
 
 // Components
 import Layout from '../components/Layout'
 import ProjectCard from '../components/ProjectCard'
-import SkillsCard from '../components/SkillsCard'
+import SkillsLogo from '../components/SkillsLogo'
 
 // Elements
 import Inner from '../elements/Inner'
@@ -19,7 +20,12 @@ import About from '../views/About'
 import Contact from '../views/Contact'
 import Skills from '../views/Skills'
 
+// Images
 import avatar from '../images/avatar.jpeg'
+import htmlLogo from '../images/html5.png'
+import reactLogo from '../images/react.png'
+import cssLogo from '../images/css3.png'
+import sassLogo from '../images/sass.png'
 
 
 const AboutHero = styled.div`
@@ -28,6 +34,10 @@ const AboutHero = styled.div`
 
 const Avatar = styled.img`
   ${tw`rounded-full w-32 xl:w-48 shadow-lg h-auto`};
+`
+
+const LogoImg = styled.img`
+  ${tw`w-16 xl:w-32 h-auto`};
 `
 
 const AboutSub = styled.span`
@@ -60,17 +70,33 @@ const ProjectsWrapper = styled.div`
   }
 `
 
-const SkillsWrapper = styled.div`
-  ${tw`flex flex-wrap mt-8`};
-  display: grid;
-  grid-gap: 4rem;
-  grid-template-columns: repeat(2, 1fr)
-  @media (max-width: 1200px) {
-    grid-gap: 3rem;
-  }
+const SkillsCard = styled.div`
+  ${tw`shadow-lg relative rounded-lg px-6 py-6 text-white`};
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: ${props => props.bg};
+  margin-bottom: 3rem;
   @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
+    margin-bottom: 2rem;
+  }
+`
+
+const SkillTitle = styled.div`
+  ${tw`text-white text-xl md:text-2xl xl:text-3xl tracking-wide font-sans`};
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-bottom: solid white 1px;
+  padding-bottom: 1rem;
+`
+
+const SkillsWrapper = styled.div`
+  margin-top: 1rem;
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
   }
 `
 
@@ -78,15 +104,16 @@ const SpanBlocked = styled.span`
   display: block;
 `
 
+
 const Index = () => (
   <>
     <Layout />
     <Parallax pages={5}>
       <Hero offset={0}>
         <BigTitle>
-          <SpanBlocked>Hello,</SpanBlocked> I'm Matt Waters.
+          <SpanBlocked>Hi,</SpanBlocked> I'm Matt Waters.
         </BigTitle>
-        <Subtitle>I am a Full-Stack Web Developer</Subtitle>
+        <Subtitle>A freelance Full-Stack Developer based in Canada</Subtitle>
       </Hero>
       <Projects offset={1}>
         <Title>Projects</Title>
@@ -111,27 +138,33 @@ const Index = () => (
       </Projects>
       <Skills offset={2}>
         <Title>Skills</Title>
-        <SkillsWrapper>
-          <SkillsCard title="HTML">
-          test
-          </SkillsCard>
-          <SkillsCard title="CSS">
-          test-2
-          </SkillsCard>
-        </SkillsWrapper>
+        <SkillsCard bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)">
+          <SkillTitle>HTML</SkillTitle>
+          <SkillsWrapper>
+            <SkillsLogo src={htmlLogo} alt="HTML5 Logo" name={`HTML5`}/>
+            <SkillsLogo src={reactLogo} alt="React.js Logo" name={`JSX`}/>
+          </SkillsWrapper>
+        </SkillsCard>
+        <SkillsCard bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)">
+          <SkillTitle>CSS</SkillTitle>
+          <SkillsWrapper>
+            <SkillsLogo src={cssLogo} alt="CSS3 Logo" name={`CSS3`} />
+            <SkillsLogo src={sassLogo} alt="Sass Logo" name={`Sass`} />
+          </SkillsWrapper>
+        </SkillsCard>
       </Skills>
       <About offset={3}>
         <Title>About</Title>
         <AboutHero>
           <Avatar src={avatar} alt="Matthew Waters picture" />
           <AboutSub>
-            Test
+            I am a Full-Stack Web Developer always looking 
           </AboutSub>
         </AboutHero>
         <AboutDesc>
           I am passionate about building excellent software that improves the lives of those around me. 
           I specialize in creating software for clients ranging from individuals and small-businesses all the way 
-          to large enterprise corporations
+          to large enterprise corporations<SpanBlocked></SpanBlocked>
           As a web developer, I enjoy using my obsessive attention to detail, my unequivocal love for making things, 
           and my mission-driven work ethic to literally change the world. That's why I’m excited to make a big impact 
           at a high growth company.

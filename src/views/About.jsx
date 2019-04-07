@@ -9,8 +9,8 @@ import SVG from '../components/SVG'
 
 const About = ({ children, offset }) => (
   <>
-    <Divider bg="#23262b" clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)" speed={0.2} offset={offset} factor={1}/>
-    <Content speed={0.4} offset={offset} >
+    <Divider bg="#23262b" clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)" speed={0.2} offset={offset} factor={1.2}/>
+    <Content speed={0.4} offset={`${offset}.1`} >
       <Inner>{children}</Inner>
     </Content>
   </>
