@@ -3,10 +3,9 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
 import { colors } from '../../tailwind'
-import { Divider, DividerTop } from '../elements/Dividers'
+import { DividerTop } from '../elements/Dividers'
 import Content from '../elements/Content'
-import { UpDown, UpDownWide } from '../styles/animations'
-import SVG from '../components/SVG'
+
 
 const Wrapper = styled.div`
   ${tw`w-full xl:w-2/3`};
@@ -21,6 +20,7 @@ const Hero = ({ children, offset }) => (
     <Content speed={0.5} offset={offset}>
       <Wrapper>{children}</Wrapper>
     </Content>
+
   </>
 )
 

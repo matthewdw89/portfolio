@@ -36,10 +36,6 @@ const Avatar = styled.img`
   ${tw`rounded-full w-32 xl:w-48 shadow-lg h-auto`};
 `
 
-const LogoImg = styled.img`
-  ${tw`w-16 xl:w-32 h-auto`};
-`
-
 const AboutSub = styled.span`
   ${tw`text-white pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl`};
 `
@@ -121,12 +117,12 @@ const Index = () => (
           <ProjectCard
             title="Mr. Swat"
             link="https://mrswat.herokuapp.com/"
-            bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
+            
           >
             A React.js built browser game that requires you to swat all the fly on the screen before time expires.
           </ProjectCard>
           <ProjectCard
-            title="Journy"
+            title="Journey"
             link="https://github.com/matthewdw89/JourneyApp"
             bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
           >
@@ -138,7 +134,7 @@ const Index = () => (
       </Projects>
       <Skills offset={2}>
         <Title>Skills</Title>
-        <SkillsCard bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)">
+        <SkillsCard bg="gray">
           <SkillTitle>HTML</SkillTitle>
           <SkillsWrapper>
             <SkillsLogo src={htmlLogo} alt="HTML5 Logo" name={`HTML5`}/>
