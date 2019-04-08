@@ -26,6 +26,7 @@ import htmlLogo from '../images/html5.png'
 import reactLogo from '../images/react.png'
 import cssLogo from '../images/css3.png'
 import sassLogo from '../images/sass.png'
+import mrSwat from '../images/mrSwat.png'
 
 
 const AboutHero = styled.div`
@@ -117,7 +118,7 @@ const Index = () => (
           <ProjectCard
             title="Mr. Swat"
             link="https://mrswat.herokuapp.com/"
-            
+            bg={mrSwat}
           >
             A React.js built browser game that requires you to swat all the fly on the screen before time expires.
           </ProjectCard>

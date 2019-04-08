@@ -2,22 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
-import img1 from '../images/mrSwat.png'
 
 const Macbook = styled.div`
-  width: 80%;
+  width: 100%;
   margin: 50px auto;
   perspective: 750;
   perspective-origin: 50% bottom;
-  transform-style: preserve-3d;
-  transition: all 1s;
+  @media (max-width: 900px) {
+    width: 60%;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `
 const MacbookLid = styled.div`
   width: 80%;
   margin: 0 auto;
-  transform-origin: 50% bottom;
-  transform-style: preserve-3d;
-  transition: all 1s;
 `
 
 const MacbookScreen = styled.div`
@@ -26,13 +26,11 @@ const MacbookScreen = styled.div`
   margin: 0 auto;
   padding: 3%;
   border-radius: 5px 5px 0 0;
-  transform-style: preserve-3d;
-  transition: all 1s;
 `
 const MacbookContent=styled.div`
   position: relative;
   overflow: hidden;
-  background: url(${img1});
+  background: url("${props => props.bg}");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -68,11 +66,11 @@ const MacbookBase = styled.div`
   }
 `
 
-const Test = () => (
+const LaptopView = ({bg}) => (
   <Macbook>
     <MacbookLid>
       <MacbookScreen>
-        <MacbookContent>
+        <MacbookContent bg={bg}>
         </MacbookContent>
       </MacbookScreen>
     </MacbookLid>
@@ -80,5 +78,8 @@ const Test = () => (
   </Macbook>
 )
 
-export default Test
+export default LaptopView
 
+LaptopView.propTypes = {
+  bg: PropTypes.string.isRequired,
+}

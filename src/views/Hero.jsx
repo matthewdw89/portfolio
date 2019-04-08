@@ -2,13 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
-import { colors } from '../../tailwind'
+import { fadeDownAnimation } from '../styles/animations'
 import { DividerTop } from '../elements/Dividers'
 import Content from '../elements/Content'
-
+import DownArrowImg from '../images/downArrow.svg'
 
 const Wrapper = styled.div`
   ${tw`w-full xl:w-2/3`};
+`
+
+const DownArrow = styled.img`
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+  cursor:pointer;
+  ${fadeDownAnimation};
 `
 
 const Hero = ({ children, offset }) => (
@@ -19,8 +27,8 @@ const Hero = ({ children, offset }) => (
       factor={0.8}/>
     <Content speed={0.5} offset={offset}>
       <Wrapper>{children}</Wrapper>
+      <DownArrow src={DownArrowImg} />
     </Content>
-
   </>
 )
 
