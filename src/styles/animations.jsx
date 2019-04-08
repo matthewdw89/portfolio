@@ -40,6 +40,12 @@ const upDownWide = keyframes`
   }
 `
 
+const fadeDown = keyframes`
+  0% { transform: translate(0, -20px); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translate(0, 20px); opacity: 0; }
+`
+
 const upDownAnimation = css`
   ${upDown} 4s ease-in-out infinite alternate;
 `
@@ -64,4 +70,9 @@ export const waveAnimation = length => css`
 
 export const rotateAnimation = length => css`
   animation: ${rotate} ${length} linear infinite;
+`
+
+export const fadeDownAnimation = css`
+  animation: ${fadeDown} 2s ease-in-out infinite;
+}
 `
