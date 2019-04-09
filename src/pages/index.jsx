@@ -27,6 +27,7 @@ import reactLogo from '../images/react.png'
 import cssLogo from '../images/css3.png'
 import sassLogo from '../images/sass.png'
 import mrSwat from '../images/mrSwat.png'
+import journeyImg from '../images/journey.png'
 
 
 const AboutHero = styled.div`
@@ -63,7 +64,7 @@ const ProjectsWrapper = styled.div`
   }
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
   }
 `
 
@@ -110,7 +111,7 @@ const Index = () => (
         <BigTitle>
           <SpanBlocked>Hi,</SpanBlocked> I'm Matt Waters.
         </BigTitle>
-        <Subtitle>A freelance Full-Stack Developer based in Canada</Subtitle>
+        <Subtitle>A freelance Full-Stack Developer.</Subtitle>
       </Hero>
       <Projects offset={1}>
         <Title>Projects</Title>
@@ -125,7 +126,7 @@ const Index = () => (
           <ProjectCard
             title="Journey"
             link="https://github.com/matthewdw89/JourneyApp"
-            bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
+            bg={journeyImg}
           >
             Full-Stack web app for travelers to meet other travels. 
             You can search for people in your area, or a destination you are going, 
