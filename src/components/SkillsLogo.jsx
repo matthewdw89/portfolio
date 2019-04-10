@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `
 const Img = styled.img`
   ${tw`w-16 md:w-24 xl:w-32 h-16 md:h-24 xl:h-32`};
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  object-fit: contain;
 `
 
 const Title = styled.div`

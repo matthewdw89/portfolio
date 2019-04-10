@@ -5,7 +5,7 @@ import Inner from '../elements/Inner'
 
 const Skills = ({ children, offset }) => (
   <>
-    <Content speed={0.2} offset={`${offset}.3`} factor={1}>
+    <Content speed={0.2} offset={`${offset}.2`} factor={1.5}>
       <Inner>{children}</Inner>
     </Content>
   </>

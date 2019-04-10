@@ -33,6 +33,11 @@ import sassLogo from '../images/sass.svg'
 import nodeLogo from '../images/nodejs.svg'
 import javascriptLogo from '../images/javascript.svg'
 import githubLogo from '../images/github.svg'
+import mongoLogo from '../images/mongodb.svg'
+import mysqlLogo from '../images/mysql.svg'
+import wordpressLogo from '../images/wordpress.svg'
+import npmLogo from '../images/npm.svg'
+import gatsbyLogo from '../images/gatsby.svg'
 
 const AboutHero = styled.div`
   ${tw`flex flex-col lg:flex-row items-center mt-8`};
@@ -77,18 +82,10 @@ const SkillsCard = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  background: ${props => props.bg};
   margin-bottom: 3rem;
   @media (max-width: 900px) {
     margin-bottom: 2rem;
   }
-`
-
-const SkillTitle = styled.div`
-  ${tw`text-white text-xl md:text-2xl xl:text-3xl tracking-wide font-sans`};
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  border-bottom: solid white 1px;
-  padding-bottom: 1rem;
 `
 
 const SkillsWrapper = styled.div`
@@ -96,7 +93,7 @@ const SkillsWrapper = styled.div`
   display: grid;
   grid-auto-flow: row;
   grid-gap: 1rem;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   @media (max-width: 900px) {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -140,15 +137,20 @@ const Index = () => (
       </Projects>
       <Skills offset={2}>
         <Title>Skills</Title>
-        <SkillsCard bg="transparent">
+        <SkillsCard>
           <SkillsWrapper>
             <SkillsLogo src={htmlLogo} alt="HTML5 Logo" name={`HTML5`}/>
             <SkillsLogo src={cssLogo} alt="CSS3 Logo" name={`CSS3`} />
             <SkillsLogo src={javascriptLogo} alt="JavaScript Logo" name={`JavaScript`}/>
-            <SkillsLogo src={sassLogo} alt="Sass Logo" name={`SASS`} />
             <SkillsLogo src={reactLogo} alt="React.js Logo" name={`React`}/>
             <SkillsLogo src={nodeLogo} alt="Node.js Logo" name={`Node.js`}/>
+            <SkillsLogo src={sassLogo} alt="Sass Logo" name={`SASS`} />
             <SkillsLogo src={githubLogo} alt="Github Logo" name={`Github`}/>
+            <SkillsLogo src={mongoLogo} alt="MongoDB Logo" name={`MongoDB`}/>
+            <SkillsLogo src={gatsbyLogo} alt="Gatsby Logo" name={`Gatsby`}/>
+            <SkillsLogo src={mysqlLogo} alt="MySQL Logo" name={`MySql`}/>
+            <SkillsLogo src={npmLogo} alt="NPM Logo" name={`NPM`}/>
+            <SkillsLogo src={wordpressLogo} alt="Wordpress Logo" name={`Wordpress`}/>
           </SkillsWrapper>
         </SkillsCard>
       </Skills>
@@ -174,13 +176,14 @@ const Index = () => (
           <Title>Get in touch</Title>
           <ContactText>
             Say <a href="mailto:matthewdw89@gmail.com">Hi</a> or find me on other platforms:{' '}
-            <a href="https://www.instagram.com/mattdwaters/" target="_blank" rel="noopener noreferrer">Instagram</a> &{' '}
-            <a href="https://www.linkedin.com/in/mattdwaters/" target="_blank" rel="noopener noreferrer">LinkedIn</a> 
+            <a href="https://github.com/matthewdw89" target="_blank" rel="noopener noreferrer">Github</a>,{' '}
+            <a href="https://www.linkedin.com/in/mattdwaters/" target="_blank" rel="noopener noreferrer">LinkedIn</a> &{' '}
+            <a href="https://www.instagram.com/mattdwaters/" target="_blank" rel="noopener noreferrer">Instagram</a> 
           </ContactText>
         </Inner>
         <Footer>
-          <SpanBlocked><a href="https://github.com/matthewdw89" target="_blank" rel="noopener noreferrer">Github</a></SpanBlocked>
-          Made by Matthew Waters.
+          {/* <SpanBlocked><a href="https://www.instagram.com/mattdwaters/" target="_blank" rel="noopener noreferrer">Instagram</a> </SpanBlocked> */}
+          © 2019 | Made by Matthew Waters.
         </Footer>
       </Contact>
     </Parallax>
