@@ -22,13 +22,17 @@ import Skills from '../views/Skills'
 
 // Images
 import avatar from '../images/avatar.jpeg'
-import htmlLogo from '../images/html5.png'
-import reactLogo from '../images/react.png'
-import cssLogo from '../images/css3.png'
-import sassLogo from '../images/sass.png'
 import mrSwat from '../images/mrSwat.png'
 import journeyImg from '../images/journey.png'
 
+// Logos
+import htmlLogo from '../images/html5.png'
+import reactLogo from '../images/react.png'
+import cssLogo from '../images/css3.png'
+import sassLogo from '../images/sass.svg'
+import nodeLogo from '../images/nodejs.svg'
+import javascriptLogo from '../images/javascript.svg'
+import githubLogo from '../images/github.svg'
 
 const AboutHero = styled.div`
   ${tw`flex flex-col lg:flex-row items-center mt-8`};
@@ -69,7 +73,7 @@ const ProjectsWrapper = styled.div`
 `
 
 const SkillsCard = styled.div`
-  ${tw`shadow-lg relative rounded-lg px-6 py-6 text-white`};
+  ${tw`relative rounded-lg px-6 py-6 text-white`};
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -136,18 +140,15 @@ const Index = () => (
       </Projects>
       <Skills offset={2}>
         <Title>Skills</Title>
-        <SkillsCard bg="gray">
-          <SkillTitle>HTML</SkillTitle>
+        <SkillsCard bg="transparent">
           <SkillsWrapper>
             <SkillsLogo src={htmlLogo} alt="HTML5 Logo" name={`HTML5`}/>
-            <SkillsLogo src={reactLogo} alt="React.js Logo" name={`JSX`}/>
-          </SkillsWrapper>
-        </SkillsCard>
-        <SkillsCard bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)">
-          <SkillTitle>CSS</SkillTitle>
-          <SkillsWrapper>
             <SkillsLogo src={cssLogo} alt="CSS3 Logo" name={`CSS3`} />
-            <SkillsLogo src={sassLogo} alt="Sass Logo" name={`Sass`} />
+            <SkillsLogo src={javascriptLogo} alt="JavaScript Logo" name={`JavaScript`}/>
+            <SkillsLogo src={sassLogo} alt="Sass Logo" name={`SASS`} />
+            <SkillsLogo src={reactLogo} alt="React.js Logo" name={`React`}/>
+            <SkillsLogo src={nodeLogo} alt="Node.js Logo" name={`Node.js`}/>
+            <SkillsLogo src={githubLogo} alt="Github Logo" name={`Github`}/>
           </SkillsWrapper>
         </SkillsCard>
       </Skills>

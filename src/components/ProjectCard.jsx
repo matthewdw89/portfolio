@@ -19,9 +19,10 @@ const Text = styled.p`
 `
 
 const Title = styled.h3`
-  ${tw`text-white uppercase text-2xl md:text-3xl xl:text-4xl tracking-wide text-center font-sans pt-8`};
+  ${tw`text-white uppercase text-2xl md:text-3xl xl:text-4xl tracking-wide text-center font-sans`};
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   font-weight: normal;
+  margin: 0;
 `
 
 const ProjectCard = ({ title, link, children, bg }) => (
