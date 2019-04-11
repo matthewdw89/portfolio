@@ -8,9 +8,6 @@ const Wrapper = styled.a`
   width: 100%;
   ${tw`relative no-underline rounded-lg px-8 py-8 text-white`};
   transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  &:hover {
-    transform: translateY(-8px);
-  }
 `
 const Text = styled.p`
   ${tw`opacity-75 font-sans text-sm md:text-base`};

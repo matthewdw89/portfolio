@@ -159,13 +159,13 @@ const Index = () => (
         <AboutHero>
           <Avatar src={avatar} alt="Matthew Waters picture" />
           <AboutSub>
-            I am a Full-Stack Web Developer always looking 
+            I am a Full-Stack Web Developer always looking.
           </AboutSub>
         </AboutHero>
         <AboutDesc>
           I am passionate about building excellent software that improves the lives of those around me. 
           I specialize in creating software for clients ranging from individuals and small-businesses all the way 
-          to large enterprise corporations<SpanBlocked></SpanBlocked>
+          to large enterprise corporations<br/>
           As a web developer, I enjoy using my obsessive attention to detail, my unequivocal love for making things, 
           and my mission-driven work ethic to literally change the world. That's why I’m excited to make a big impact 
           at a high growth company.
@@ -182,7 +182,6 @@ const Index = () => (
           </ContactText>
         </Inner>
         <Footer>
-          {/* <SpanBlocked><a href="https://www.instagram.com/mattdwaters/" target="_blank" rel="noopener noreferrer">Instagram</a> </SpanBlocked> */}
           © 2019 | Made by Matthew Waters.
         </Footer>
       </Contact>
