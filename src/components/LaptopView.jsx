@@ -8,11 +8,16 @@ const Macbook = styled.div`
   margin: 50px auto;
   perspective: 750;
   perspective-origin: 50% bottom;
+  transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   @media (max-width: 900px) {
     width: 60%;
   }
   @media (max-width: 600px) {
     width: 100%;
+  }
+  &:hover {
+    transform: translateY(-12px);
+    
   }
 `
 const MacbookLid = styled.div`

@@ -22,13 +22,22 @@ import Skills from '../views/Skills'
 
 // Images
 import avatar from '../images/avatar.jpeg'
-import htmlLogo from '../images/html5.png'
-import reactLogo from '../images/react.png'
-import cssLogo from '../images/css3.png'
-import sassLogo from '../images/sass.png'
 import mrSwat from '../images/mrSwat.png'
 import journeyImg from '../images/journey.png'
 
+// Logos
+import htmlLogo from '../images/html5.png'
+import reactLogo from '../images/react.png'
+import cssLogo from '../images/css3.png'
+import sassLogo from '../images/sass.svg'
+import nodeLogo from '../images/nodejs.svg'
+import javascriptLogo from '../images/javascript.svg'
+import githubLogo from '../images/github.svg'
+import mongoLogo from '../images/mongodb.svg'
+import mysqlLogo from '../images/mysql.svg'
+import wordpressLogo from '../images/wordpress.svg'
+import npmLogo from '../images/npm.svg'
+import gatsbyLogo from '../images/gatsby.svg'
 
 const AboutHero = styled.div`
   ${tw`flex flex-col lg:flex-row items-center mt-8`};
@@ -69,22 +78,14 @@ const ProjectsWrapper = styled.div`
 `
 
 const SkillsCard = styled.div`
-  ${tw`shadow-lg relative rounded-lg px-6 py-6 text-white`};
+  ${tw`relative rounded-lg px-6 py-6 text-white`};
   width: 100%;
   display: flex;
   flex-direction: column;
-  background: ${props => props.bg};
   margin-bottom: 3rem;
   @media (max-width: 900px) {
     margin-bottom: 2rem;
   }
-`
-
-const SkillTitle = styled.div`
-  ${tw`text-white text-xl md:text-2xl xl:text-3xl tracking-wide font-sans`};
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  border-bottom: solid white 1px;
-  padding-bottom: 1rem;
 `
 
 const SkillsWrapper = styled.div`
@@ -92,7 +93,7 @@ const SkillsWrapper = styled.div`
   display: grid;
   grid-auto-flow: row;
   grid-gap: 1rem;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   @media (max-width: 900px) {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -136,18 +137,20 @@ const Index = () => (
       </Projects>
       <Skills offset={2}>
         <Title>Skills</Title>
-        <SkillsCard bg="gray">
-          <SkillTitle>HTML</SkillTitle>
+        <SkillsCard>
           <SkillsWrapper>
             <SkillsLogo src={htmlLogo} alt="HTML5 Logo" name={`HTML5`}/>
-            <SkillsLogo src={reactLogo} alt="React.js Logo" name={`JSX`}/>
-          </SkillsWrapper>
-        </SkillsCard>
-        <SkillsCard bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)">
-          <SkillTitle>CSS</SkillTitle>
-          <SkillsWrapper>
             <SkillsLogo src={cssLogo} alt="CSS3 Logo" name={`CSS3`} />
-            <SkillsLogo src={sassLogo} alt="Sass Logo" name={`Sass`} />
+            <SkillsLogo src={javascriptLogo} alt="JavaScript Logo" name={`JavaScript`}/>
+            <SkillsLogo src={reactLogo} alt="React.js Logo" name={`React`}/>
+            <SkillsLogo src={nodeLogo} alt="Node.js Logo" name={`Node.js`}/>
+            <SkillsLogo src={sassLogo} alt="Sass Logo" name={`SASS`} />
+            <SkillsLogo src={githubLogo} alt="Github Logo" name={`Github`}/>
+            <SkillsLogo src={mongoLogo} alt="MongoDB Logo" name={`MongoDB`}/>
+            <SkillsLogo src={gatsbyLogo} alt="Gatsby Logo" name={`Gatsby`}/>
+            <SkillsLogo src={mysqlLogo} alt="MySQL Logo" name={`MySql`}/>
+            <SkillsLogo src={npmLogo} alt="NPM Logo" name={`NPM`}/>
+            <SkillsLogo src={wordpressLogo} alt="Wordpress Logo" name={`Wordpress`}/>
           </SkillsWrapper>
         </SkillsCard>
       </Skills>
@@ -156,13 +159,13 @@ const Index = () => (
         <AboutHero>
           <Avatar src={avatar} alt="Matthew Waters picture" />
           <AboutSub>
-            I am a Full-Stack Web Developer always looking 
+            I am a Full-Stack Web Developer always looking.
           </AboutSub>
         </AboutHero>
         <AboutDesc>
           I am passionate about building excellent software that improves the lives of those around me. 
           I specialize in creating software for clients ranging from individuals and small-businesses all the way 
-          to large enterprise corporations<SpanBlocked></SpanBlocked>
+          to large enterprise corporations<br/>
           As a web developer, I enjoy using my obsessive attention to detail, my unequivocal love for making things, 
           and my mission-driven work ethic to literally change the world. That's why I’m excited to make a big impact 
           at a high growth company.
@@ -173,13 +176,13 @@ const Index = () => (
           <Title>Get in touch</Title>
           <ContactText>
             Say <a href="mailto:matthewdw89@gmail.com">Hi</a> or find me on other platforms:{' '}
-            <a href="https://www.instagram.com/mattdwaters/" target="_blank" rel="noopener noreferrer">Instagram</a> &{' '}
-            <a href="https://www.linkedin.com/in/mattdwaters/" target="_blank" rel="noopener noreferrer">LinkedIn</a> 
+            <a href="https://github.com/matthewdw89" target="_blank" rel="noopener noreferrer">Github</a>,{' '}
+            <a href="https://www.linkedin.com/in/mattdwaters/" target="_blank" rel="noopener noreferrer">LinkedIn</a> &{' '}
+            <a href="https://www.instagram.com/mattdwaters/" target="_blank" rel="noopener noreferrer">Instagram</a> 
           </ContactText>
         </Inner>
         <Footer>
-          <SpanBlocked><a href="https://github.com/matthewdw89" target="_blank" rel="noopener noreferrer">Github</a></SpanBlocked>
-          Made by Matthew Waters.
+          © 2019 | Made by Matthew Waters.
         </Footer>
       </Contact>
     </Parallax>
