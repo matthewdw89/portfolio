@@ -110,9 +110,9 @@ const Index = () => (
     <Parallax pages={5}>
       <Hero offset={0}>
         <BigTitle>
-          <SpanBlocked>Hi,</SpanBlocked> I'm Matt Waters.
+          <SpanBlocked>Hi,</SpanBlocked> I'm Matt Waters
         </BigTitle>
-        <Subtitle>A freelance Full-Stack Developer.</Subtitle>
+        <Subtitle>A freelance Full-Stack Developer</Subtitle>
       </Hero>
       <Projects offset={1}>
         <Title>Projects</Title>
@@ -131,7 +131,7 @@ const Index = () => (
           >
             Full-Stack web app for travelers to meet other travels. 
             You can search for people in your area, or a destination you are going, 
-            and then contact them directly
+            and then contact them directly.
           </ProjectCard>
         </ProjectsWrapper>
       </Projects>
