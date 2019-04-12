@@ -107,7 +107,7 @@ const SpanBlocked = styled.span`
 const Index = () => (
   <>
     <Layout />
-    <Parallax pages={5}>
+    <Parallax pages={6}>
       <Hero offset={0}>
         <BigTitle>
           <SpanBlocked>Hi,</SpanBlocked> I'm Matt Waters
@@ -135,7 +135,7 @@ const Index = () => (
           </ProjectCard>
         </ProjectsWrapper>
       </Projects>
-      <Skills offset={2}>
+      <Skills offset={3}>
         <Title>Skills</Title>
         <SkillsCard>
           <SkillsWrapper>
@@ -154,7 +154,7 @@ const Index = () => (
           </SkillsWrapper>
         </SkillsCard>
       </Skills>
-      <About offset={3}>
+      <About offset={4}>
         <Title>About</Title>
         <AboutHero>
           <Avatar src={avatar} alt="Matthew Waters picture" />
@@ -170,9 +170,9 @@ const Index = () => (
           are all part of my days off.
         </AboutDesc>
       </About>
-      <Contact offset={4}>
+      <Contact offset={5}>
         <Inner>
-          <Title>Get in touch</Title>
+          <Title>Contact</Title>
           <ContactText>
             Say <a href="mailto:matthewdw89@gmail.com">Hi</a> or find me on other platforms:{' '}
             <a href="https://github.com/matthewdw89" target="_blank" rel="noopener noreferrer">Github</a>,{' '}
