@@ -17,7 +17,6 @@ const Macbook = styled.div`
   }
   &:hover {
     transform: translateY(-12px);
-    
   }
 `
 const MacbookLid = styled.div`

@@ -159,16 +159,15 @@ const Index = () => (
         <AboutHero>
           <Avatar src={avatar} alt="Matthew Waters picture" />
           <AboutSub>
-            I am a Full-Stack Web Developer always looking.
+            I have a passion for creating and helping. I am lucky to love the work I do!
           </AboutSub>
         </AboutHero>
         <AboutDesc>
-          I am passionate about building excellent software that improves the lives of those around me. 
-          I specialize in creating software for clients ranging from individuals and small-businesses all the way 
-          to large enterprise corporations<br/>
-          As a web developer, I enjoy using my obsessive attention to detail, my unequivocal love for making things, 
-          and my mission-driven work ethic to literally change the world. That's why I’m excited to make a big impact 
-          at a high growth company.
+          Since beginning my journey as a freelance developer, I've done work for individuals, collaborated 
+          with startups, and created web sites for small and medium-sized businesses. I'm quietly confident, 
+          curious, have a passion for learning, and constantly working on improving one website at a time.<br/>
+          If I'm not online, you can normally find me outside, or eating. Hikes, taking photos, going to the beach 
+          are all part of my days off.
         </AboutDesc>
       </About>
       <Contact offset={4}>
@@ -182,6 +181,7 @@ const Index = () => (
           </ContactText>
         </Inner>
         <Footer>
+          
           © 2019 | Made by Matthew Waters.
         </Footer>
       </Contact>
