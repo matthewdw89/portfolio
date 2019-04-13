@@ -4,9 +4,7 @@ import tw from 'tailwind.macro'
 import styled from 'styled-components'
 import { Divider } from '../elements/Dividers'
 import Content from '../elements/Content'
-import { UpDown, UpDownWide, waveAnimation } from '../styles/animations'
-import { colors } from '../../tailwind'
-import SVG from '../components/SVG'
+import { waveAnimation } from '../styles/animations'
 
 const WaveWrapper = styled.div`
   ${tw`absolute pin-b w-full`};

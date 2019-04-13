@@ -32,7 +32,7 @@ const ProjectCard = ({ title, link, children, bg }) => (
     <Title>{title}</Title>
     <LaptopView bg={bg}/>
     <Text>{children}</Text>
-    <ClickInfo>Click for more</ClickInfo>
+    <ClickInfo>{link.includes("github") ? "Click for Github repository" : "Click to view website"}</ClickInfo>
   </Wrapper>
 )
 
