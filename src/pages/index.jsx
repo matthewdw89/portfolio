@@ -109,7 +109,7 @@ const Index = () => (
     <Layout />
     <Parallax pages={6}>
       <Hero offset={0}>
-        <BigTitle>
+        <BigTitle tabIndex={0}>
           <SpanBlocked>Hi,</SpanBlocked> I'm Matt Waters
         </BigTitle>
         <Subtitle>A freelance Full-Stack Developer</Subtitle>

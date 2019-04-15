@@ -15,7 +15,6 @@ const DownArrow = styled.img`
   width: 50px;
   position: absolute;
   bottom: 0;
-  cursor:pointer;
   ${fadeDownAnimation};
 `
 
