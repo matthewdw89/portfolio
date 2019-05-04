@@ -182,7 +182,7 @@ const Index = () => (
         </Inner>
         <Footer>
           
-          © 2019 | Made by Matthew Waters.
+          © 2019 | Made by Matthew Waters
         </Footer>
       </Contact>
     </Parallax>
