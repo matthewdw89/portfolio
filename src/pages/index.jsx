@@ -1,43 +1,44 @@
-import React from 'react'
-import styled from 'styled-components'
-import tw from 'tailwind.macro'
-import { Parallax } from 'react-spring/renderprops-addons.cjs'
-import config from '../../config/website'
+import React from 'react';
+import styled from 'styled-components';
+import tw from 'tailwind.macro';
+import { Parallax } from 'react-spring/renderprops-addons.cjs';
+import config from '../../config/website';
 
 // Components
-import Layout from '../components/Layout'
-import ProjectCard from '../components/ProjectCard'
-import SkillsLogo from '../components/SkillsLogo'
+import Layout from '../components/Layout';
+import ProjectCard from '../components/ProjectCard';
+import SkillsLogo from '../components/SkillsLogo';
 
 // Elements
-import Inner from '../elements/Inner'
-import { Title, BigTitle, Subtitle } from '../elements/Titles'
+import Inner from '../elements/Inner';
+import { Title, BigTitle, Subtitle } from '../elements/Titles';
 
 // Views
-import Hero from '../views/Hero'
-import Projects from '../views/Projects'
-import About from '../views/About'
-import Contact from '../views/Contact'
-import Skills from '../views/Skills'
+import Hero from '../views/Hero';
+import Projects from '../views/Projects';
+import About from '../views/About';
+import Contact from '../views/Contact';
+import Skills from '../views/Skills';
 
 // Images
-import avatar from '../images/avatar.jpeg'
-import mrSwat from '../images/mrSwat.png'
-import journeyImg from '../images/journey.png'
+import avatar from '../images/avatar.jpeg';
+import mrSwat from '../images/mrSwat.png';
+import journeyImg from '../images/journey.png';
+import novaChill from '../images/novaChill.png';
 
 // Logos
-import htmlLogo from '../images/html5.png'
-import reactLogo from '../images/react.png'
-import cssLogo from '../images/css3.png'
-import sassLogo from '../images/sass.svg'
-import nodeLogo from '../images/nodejs.svg'
-import javascriptLogo from '../images/javascript.svg'
-import githubLogo from '../images/github.svg'
-import mongoLogo from '../images/mongodb.svg'
-import mysqlLogo from '../images/mysql.svg'
-import wordpressLogo from '../images/wordpress.svg'
-import npmLogo from '../images/npm.svg'
-import gatsbyLogo from '../images/gatsby.svg'
+import htmlLogo from '../images/html5.png';
+import reactLogo from '../images/react.png';
+import cssLogo from '../images/css3.png';
+import sassLogo from '../images/sass.svg';
+import nodeLogo from '../images/nodejs.svg';
+import javascriptLogo from '../images/javascript.svg';
+import githubLogo from '../images/github.svg';
+import mongoLogo from '../images/mongodb.svg';
+import mysqlLogo from '../images/mysql.svg';
+import wordpressLogo from '../images/wordpress.svg';
+import npmLogo from '../images/npm.svg';
+import gatsbyLogo from '../images/gatsby.svg';
 
 const AboutHero = styled.div`
   ${tw`flex flex-col lg:flex-row items-center mt-8`};
@@ -132,6 +133,13 @@ const Index = () => (
             Full-Stack web app for travelers to meet other travels. 
             You can search for people in your area, or a destination you are going, 
             and then contact them directly.
+          </ProjectCard>
+          <ProjectCard
+            title="NovaChill"
+            link="https://novachill.com.au/"
+            bg={novaChill}
+          >
+            NovaChill is one of the most innovative and high-quality refrigeration brands on the Australian market
           </ProjectCard>
         </ProjectsWrapper>
       </Projects>
