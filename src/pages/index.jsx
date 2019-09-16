@@ -138,14 +138,14 @@ class Index extends React.Component {
     return (
       <>
         <Layout />
-        <Parallax pages={screenOrientation === 90 ? 10 : 7}>
+        <Parallax pages={screenOrientation === 90 ? 13 : 7}>
           <Hero offset={0}>
             <BigTitle tabIndex={0}>
               <SpanBlocked>Hi,</SpanBlocked> I'm Matt Waters
             </BigTitle>
             <Subtitle>A freelance Website Developer</Subtitle>
           </Hero>
-          <Projects offset={screenOrientation === 90 ? 2 : 1}>
+          <Projects offset={screenOrientation === 90 ? 3 : 1}>
             <Title>Projects</Title>
             <ProjectsWrapper>
               <ProjectCard
@@ -173,7 +173,7 @@ class Index extends React.Component {
               </ProjectCard>
             </ProjectsWrapper>
           </Projects>
-          <Skills offset={screenOrientation === 90 ? 6 : 4}>
+          <Skills offset={screenOrientation === 90 ? 8 : 4}>
             <Title>Skills</Title>
             <SkillsCard>
               <SkillsWrapper>
@@ -192,7 +192,7 @@ class Index extends React.Component {
               </SkillsWrapper>
             </SkillsCard>
           </Skills>
-          <About offset={screenOrientation === 90 ? 8 : 5}>
+          <About offset={screenOrientation === 90 ? 10 : 5}>
             <Title>About</Title>
             <AboutHero>
               <Avatar src={avatar} alt="Matthew Waters picture" />
@@ -208,7 +208,7 @@ class Index extends React.Component {
               are all part of my days off.
             </AboutDesc>
           </About>
-          <Contact offset={screenOrientation === 90 ? 9 : 6}>
+          <Contact offset={screenOrientation === 90 ? 12 : 6}>
             <Inner>
               <Title>Contact</Title>
               <ContactText>
