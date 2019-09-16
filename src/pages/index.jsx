@@ -113,7 +113,7 @@ const Index = () => (
         <BigTitle tabIndex={0}>
           <SpanBlocked>Hi,</SpanBlocked> I'm Matt Waters
         </BigTitle>
-        <Subtitle>A freelance Full-Stack Developer</Subtitle>
+        <Subtitle>A freelance Website Developer</Subtitle>
       </Hero>
       <Projects offset={1}>
         <Title>Projects</Title>
