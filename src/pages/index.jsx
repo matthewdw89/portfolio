@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { Parallax } from 'react-spring/renderprops-addons.cjs';
-import config from '../../config/website';
 
 // Components
 import Layout from '../components/Layout';
@@ -104,97 +103,129 @@ const SpanBlocked = styled.span`
   display: block;
 `
 
+// let screenOrientation = (window.innerWidth > window.innerHeight) ? 90 : 0;
 
-const Index = () => (
-  <>
-    <Layout />
-    <Parallax pages={6}>
-      <Hero offset={0}>
-        <BigTitle tabIndex={0}>
-          <SpanBlocked>Hi,</SpanBlocked> I'm Matt Waters
-        </BigTitle>
-        <Subtitle>A freelance Website Developer</Subtitle>
-      </Hero>
-      <Projects offset={1}>
-        <Title>Projects</Title>
-        <ProjectsWrapper>
-          <ProjectCard
-            title="Mr. Swat"
-            link="https://mrswat.herokuapp.com/"
-            bg={mrSwat}
-          >
-            A React.js built browser game that requires you to swat all the fly on the screen before time expires.
-          </ProjectCard>
-          <ProjectCard
-            title="Journey"
-            link="https://github.com/matthewdw89/JourneyApp"
-            bg={journeyImg}
-          >
-            Full-Stack web app for travelers to meet other travels. 
-            You can search for people in your area, or a destination you are going, 
-            and then contact them directly.
-          </ProjectCard>
-          <ProjectCard
-            title="NovaChill"
-            link="https://novachill.com.au/"
-            bg={novaChill}
-          >
-            NovaChill is one of the most innovative and high-quality refrigeration brands on the Australian market
-          </ProjectCard>
-        </ProjectsWrapper>
-      </Projects>
-      <Skills offset={3}>
-        <Title>Skills</Title>
-        <SkillsCard>
-          <SkillsWrapper>
-            <SkillsLogo src={htmlLogo} alt="HTML5 Logo" name={`HTML5`}/>
-            <SkillsLogo src={cssLogo} alt="CSS3 Logo" name={`CSS3`} />
-            <SkillsLogo src={javascriptLogo} alt="JavaScript Logo" name={`JavaScript`}/>
-            <SkillsLogo src={reactLogo} alt="React.js Logo" name={`React`}/>
-            <SkillsLogo src={nodeLogo} alt="Node.js Logo" name={`Node.js`}/>
-            <SkillsLogo src={sassLogo} alt="Sass Logo" name={`SASS`} />
-            <SkillsLogo src={githubLogo} alt="Github Logo" name={`Github`}/>
-            <SkillsLogo src={mongoLogo} alt="MongoDB Logo" name={`MongoDB`}/>
-            <SkillsLogo src={gatsbyLogo} alt="Gatsby Logo" name={`Gatsby`}/>
-            <SkillsLogo src={mysqlLogo} alt="MySQL Logo" name={`MySql`}/>
-            <SkillsLogo src={npmLogo} alt="NPM Logo" name={`NPM`}/>
-            <SkillsLogo src={wordpressLogo} alt="Wordpress Logo" name={`Wordpress`}/>
-          </SkillsWrapper>
-        </SkillsCard>
-      </Skills>
-      <About offset={4}>
-        <Title>About</Title>
-        <AboutHero>
-          <Avatar src={avatar} alt="Matthew Waters picture" />
-          <AboutSub>
-            I have a passion for creating and helping. I am lucky to love the work I do!
-          </AboutSub>
-        </AboutHero>
-        <AboutDesc>
-          Since beginning my journey as a freelance developer, I've done work for individuals, collaborated 
-          with startups, and created web sites for small and medium-sized businesses. I'm quietly confident, 
-          curious, have a passion for learning, and constantly working on improving one website at a time.<br/>
-          If I'm not online, you can normally find me outside, or eating. Hikes, taking photos, going to the beach 
-          are all part of my days off.
-        </AboutDesc>
-      </About>
-      <Contact offset={5}>
-        <Inner>
-          <Title>Contact</Title>
-          <ContactText>
-            Say <a href="mailto:matthewdw89@gmail.com">Hi</a> or find me on other platforms:{' '}
-            <a href="https://github.com/matthewdw89" target="_blank" rel="noopener noreferrer">Github</a>,{' '}
-            <a href="https://www.linkedin.com/in/mattdwaters/" target="_blank" rel="noopener noreferrer">LinkedIn</a> &{' '}
-            <a href="https://www.instagram.com/mattdwaters/" target="_blank" rel="noopener noreferrer">Instagram</a> 
-          </ContactText>
-        </Inner>
-        <Footer>
-          
-          © 2019 | Made by Matthew Waters
-        </Footer>
-      </Contact>
-    </Parallax>
-  </>
-)
+class Index extends React.Component {
+  state = {
+    screenOrientation: null,
+  }
+
+  updateOrientation = () => {
+    let screenOrientation = (window.innerWidth > window.innerHeight && window.innerWidth < 825) ? 90 : 0;
+    this.setState({ screenOrientation: screenOrientation })
+  }
+
+  componentDidMount = () => {
+    this.updateOrientation();
+    window.addEventListener("resize", this.updateOrientation);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateOrientation);
+  }
+
+  // Size of a page, (1=100%, 1.5=1 and 1/2, ...) */
+  // factor: PropTypes.number,
+
+  // Determines where the layer will be at when scrolled to (0=start, 1=1st page, ...) */
+  // offset: PropTypes.number,
+  
+  // shifts the layer in accordance to its offset, values can be positive or negative */
+  // speed: PropTypes.number,
+
+  render(){
+    let screenOrientation = this.state.screenOrientation
+    return (
+      <>
+        <Layout />
+        <Parallax pages={screenOrientation === 90 ? 10 : 7}>
+          <Hero offset={0}>
+            <BigTitle tabIndex={0}>
+              <SpanBlocked>Hi,</SpanBlocked> I'm Matt Waters
+            </BigTitle>
+            <Subtitle>A freelance Website Developer</Subtitle>
+          </Hero>
+          <Projects offset={screenOrientation === 90 ? 2 : 1}>
+            <Title>Projects</Title>
+            <ProjectsWrapper>
+              <ProjectCard
+                title="Mr. Swat"
+                link="https://mrswat.herokuapp.com/"
+                bg={mrSwat}
+              >
+                A React.js built browser game that requires you to swat all the fly on the screen before time expires.
+              </ProjectCard>
+              <ProjectCard
+                title="Journey"
+                link="https://github.com/matthewdw89/JourneyApp"
+                bg={journeyImg}
+              >
+                Full-Stack web app for travelers to meet other travels.
+                You can search for people in your area, or a destination you are going,
+                and then contact them directly.
+              </ProjectCard>
+              <ProjectCard
+                title="NovaChill"
+                link="https://novachill.com.au/"
+                bg={novaChill}
+              >
+                NovaChill is one of the most innovative and high-quality refrigeration brands on the Australian market
+              </ProjectCard>
+            </ProjectsWrapper>
+          </Projects>
+          <Skills offset={screenOrientation === 90 ? 6 : 4}>
+            <Title>Skills</Title>
+            <SkillsCard>
+              <SkillsWrapper>
+                <SkillsLogo src={htmlLogo} alt="HTML5 Logo" name={`HTML5`} />
+                <SkillsLogo src={cssLogo} alt="CSS3 Logo" name={`CSS3`} />
+                <SkillsLogo src={javascriptLogo} alt="JavaScript Logo" name={`JavaScript`} />
+                <SkillsLogo src={reactLogo} alt="React.js Logo" name={`React`} />
+                <SkillsLogo src={nodeLogo} alt="Node.js Logo" name={`Node.js`} />
+                <SkillsLogo src={sassLogo} alt="Sass Logo" name={`SASS`} />
+                <SkillsLogo src={githubLogo} alt="Github Logo" name={`Github`} />
+                <SkillsLogo src={mongoLogo} alt="MongoDB Logo" name={`MongoDB`} />
+                <SkillsLogo src={gatsbyLogo} alt="Gatsby Logo" name={`Gatsby`} />
+                <SkillsLogo src={mysqlLogo} alt="MySQL Logo" name={`MySql`} />
+                <SkillsLogo src={npmLogo} alt="NPM Logo" name={`NPM`} />
+                <SkillsLogo src={wordpressLogo} alt="Wordpress Logo" name={`Wordpress`} />
+              </SkillsWrapper>
+            </SkillsCard>
+          </Skills>
+          <About offset={screenOrientation === 90 ? 8 : 5}>
+            <Title>About</Title>
+            <AboutHero>
+              <Avatar src={avatar} alt="Matthew Waters picture" />
+              <AboutSub>
+                I have a passion for creating and helping. I am lucky to love the work I do!
+              </AboutSub>
+            </AboutHero>
+            <AboutDesc>
+              Since beginning my journey as a freelance developer, I've done work for individuals, collaborated
+              with startups, and created web sites for small and medium-sized businesses. I'm quietly confident,
+              curious, have a passion for learning, and constantly working on improving one website at a time.<br />
+              If I'm not online, you can normally find me outside, or eating. Hikes, taking photos, going to the beach
+              are all part of my days off.
+            </AboutDesc>
+          </About>
+          <Contact offset={screenOrientation === 90 ? 9 : 6}>
+            <Inner>
+              <Title>Contact</Title>
+              <ContactText>
+                Say <a href="mailto:matthewdw89@gmail.com">Hi</a> or find me on other platforms:{' '}
+                <a href="https://github.com/matthewdw89" target="_blank" rel="noopener noreferrer">Github</a>,{' '}
+                <a href="https://www.linkedin.com/in/mattdwaters/" target="_blank" rel="noopener noreferrer">LinkedIn</a> &{' '}
+                <a href="https://www.instagram.com/mattdwaters/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              </ContactText>
+            </Inner>
+            <Footer>
+              © 2019 | Made by Matthew Waters
+            </Footer>
+          </Contact>
+        </Parallax>
+      </>
+    )
+  }
+}
 
 export default Index
