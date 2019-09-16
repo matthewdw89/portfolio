@@ -124,18 +124,26 @@ class Index extends React.Component {
     window.removeEventListener("resize", this.updateOrientation);
   }
 
+  // Size of a page, (1=100%, 1.5=1 and 1/2, ...) */
+  // factor: PropTypes.number,
+
+  // Determines where the layer will be at when scrolled to (0=start, 1=1st page, ...) */
+  // offset: PropTypes.number,
+  
+  // shifts the layer in accordance to its offset, values can be positive or negative */
+  // speed: PropTypes.number,
 
   render(){
     let screenOrientation = this.state.screenOrientation
     return (
       <>
         <Layout />
-        <Parallax pages={screenOrientation === 90 ? 9 : 6}>
+        <Parallax pages={screenOrientation === 90 ? 10 : 7}>
           <Hero offset={0}>
             <BigTitle tabIndex={0}>
               <SpanBlocked>Hi,</SpanBlocked> I'm Matt Waters
             </BigTitle>
-            <Subtitle>A freelance Full-Stack Developer</Subtitle>
+            <Subtitle>A freelance Website Developer</Subtitle>
           </Hero>
           <Projects offset={screenOrientation === 90 ? 2 : 1}>
             <Title>Projects</Title>
@@ -165,7 +173,7 @@ class Index extends React.Component {
               </ProjectCard>
             </ProjectsWrapper>
           </Projects>
-          <Skills offset={screenOrientation === 90 ? 5.2 : 3}>
+          <Skills offset={screenOrientation === 90 ? 6 : 4}>
             <Title>Skills</Title>
             <SkillsCard>
               <SkillsWrapper>
@@ -184,7 +192,7 @@ class Index extends React.Component {
               </SkillsWrapper>
             </SkillsCard>
           </Skills>
-          <About offset={screenOrientation === 90 ? 7 : 4.2}>
+          <About offset={screenOrientation === 90 ? 8 : 5}>
             <Title>About</Title>
             <AboutHero>
               <Avatar src={avatar} alt="Matthew Waters picture" />
@@ -200,7 +208,7 @@ class Index extends React.Component {
               are all part of my days off.
             </AboutDesc>
           </About>
-          <Contact offset={screenOrientation === 90 ? 8 : 5}>
+          <Contact offset={screenOrientation === 90 ? 9 : 6}>
             <Inner>
               <Title>Contact</Title>
               <ContactText>
